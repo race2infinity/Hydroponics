@@ -109,7 +109,7 @@ change in pH. <sup>[[4]](#4)</sup>
 ***DC Water Pump***- A DC Water Pump is used to pump water from the water reservoir to the substrate.
 <br>
 
-**5V Relay***- A relay is an electromagnetic switch operated by a relatively small electric current that can turn on or off a much larger electric current. It is going to be used to control the DC Water Pump
+***5V Relay***- A relay is an electromagnetic switch operated by a relatively small electric current that can turn on or off a much larger electric current. It is going to be used to control the DC Water Pump
 <br>
 
 ## Software Requirements<a name="software_requirements"></a>
