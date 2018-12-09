@@ -117,9 +117,6 @@ change in pH. <sup>[[4]](#4)</sup>
 + A Linux Environment
 + Git Version Control
 + Editor
-+ PushingBox
-+ Postman
-+ Virtuino
 + ThingSpeak
 
 ## Arduino Libraries Used<a name="arduino_libraries_used"></a>
