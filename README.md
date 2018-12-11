@@ -80,6 +80,8 @@ This project intends to automate the process of Hydroponics using IOT to make th
 ![About 2](https://imgur.com/pmIM7Nl.jpg)
 ![Log in](https://imgur.com/foOHpH1.jpg)
 ![Sign up](https://imgur.com/HEoo0pT.jpg)
+![Sensor Data (Tabular)](https://i.imgur.com/Pe3MPlg.jpg)
+![Sensor Data (Graphical)](https://i.imgur.com/Q6NAUEZ.jpg)
 
 ## Sensors Used<a name="sensors_used"></a>
 ***Arduino Mega 2560***- The hardware will most likely fit perfectly in the UNO, the problem will be the program size that may not fit in the UNOs 32kB. Plus, such a project might be increased and a mega board will allow that more easily.
