@@ -13,9 +13,9 @@ DHT dht(DHTPIN, DHTTYPE);
 
 WiFiClient client;
 
-String AP = "BLobo";       // CHANGE ME
-String PASS = "9869223662"; // CHANGE ME
-String API = "UWH8BKGIQVRARD0W";   // CHANGE ME
+String AP = "";       // CHANGE ME
+String PASS = ""; // CHANGE ME
+String API = "";   // CHANGE ME
 String HOST = "api.thingspeak.com";
 String PORT = "80";
 String field1 = "field1";
