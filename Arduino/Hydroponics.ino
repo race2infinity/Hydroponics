@@ -20,9 +20,9 @@ int pHArrayIndex = 0;
 int countTrueCommand;
 int countTimeCommand;
 boolean found = false;
-/*String AP = "BLobo";       // CHANGE ME
-String PASS = "9869223662"; // CHANGE ME
-String API = "UWH8BKGIQVRARD0W";   // CHANGE ME
+/*String AP = "";       // CHANGE ME
+String PASS = ""; // CHANGE ME
+String API = "";   // CHANGE ME
 String HOST = "api.thingspeak.com";
 String PORT = "80";
 String field1 = "field1";
