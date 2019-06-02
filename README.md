@@ -1,20 +1,23 @@
 # Automated Hydroponics using Arduino Mega
-Hydroponics is a subset of hydroculture, the method of growing plants without soil, using mineral nutrient solutions in a water solvent.
+
+<div align="center">
+  
+![NFT](https://github.com/kylelobo/Hydroponics/blob/master/images/nft.jpg)
+
+</div>
+
+<p align="center"> Hydroponics is a subset of hydroculture, the method of growing plants without soil, using mineral nutrient solutions in a water solvent. </p>
 
 ## Index
 + [Working](#working)
 + [Description](#description)
 + [Problem Definition](#problem_definition)
-+ [Explanation](#explanation)
 + [Screenshots](#screenshots)
 + [Sensors Used](#sensors_used)
 + [Software Requirements](#software_requirements)
 + [Arduino Libraries Used](#arduino_libraries_used)
 + [Conclusion](#conclusion)
 + [References](#references)
-
-## Working <a name="working"></a>
-[![Video Demonstration](http://img.youtube.com/vi/mIO8MYL-RWc/0.jpg)](http://www.youtube.com/watch?v=mIO8MYL-RWc "Video Demonstration")
 
 ## Description<a name="description"></a>
 Hydroponics is a subset of hydroculture, the method of growing plants without soil, using mineral nutrient solutions in a water solvent. Terrestrial plants may be grown with only their roots exposed to the mineral solution, or the roots may be supported by an inert medium, such as perlite or gravel.The nutrients in hydroponics can come from an array of different sources; these can include but are not limited to byproduct from fish waste, duck manure, or commercial fertilisers. <sup>[[1]](#1)</sup>
@@ -45,18 +48,18 @@ Finally, areas that don't receive consistent sunlight or warm weather can benefi
 Hydroponics allows farmers to adapt to any situation, whether it’s Antarctica’s frozen tundra, Saudi Arabia’s windswept and barren deserts, southern Arizona’s Sonoran Desert, or even a space station.
 <br>
 
+## Working <a name="working"></a>
 
-## Explanation<a name="explanation"></a>
 The entire system mainly consists of a grow box, a reservoir and a water reservoir.
 <br>
 
 The DC water pumps are attached to the nutrient solution, reservoir, water reservoir and the pH up down solutions. The water level sensor, temperature sensor, EC sensor, pH sensor are installed in the reservoir.
 <br>
 
-When the EC sensor detects low-salt levels it indicates nutrient deficiencies. Therefore, in such situations, the DC water pump pumps the nutrient solution to the reservoir. The presence of high salt levels/low water levels indicates that fresh water needs to be pumped to the reservoir.
+When the EC sensor detects low-salt levels it indicates nutrient deficiencies. Therefore, in such situations, the DC water pump pumps the nutrient solution to the reservoir. The presence of high salt levels / low water levels indicates that fresh water needs to be pumped to the reservoir.
 <br>
 
-Overlooking pH control can be perilous for plants, particularly those that rely on water supplies with high alkalinity. The pH of the nutrient solution is a major factor in determining the uptake rate of many essential nutrient ions. Run pH too high and the dreaded nutrient lockout looms. The pH sensor detects the pH level of the water and prompts the pH up/ pH down pump to balance out the pH levels in the reservoir.
+Overlooking pH control can be perilous for plants, particularly those that rely on water supplies with high alkalinity. The pH of the nutrient solution is a major factor in determining the uptake rate of many essential nutrient ions. Run pH too high and the dreaded nutrient lockout looms. The pH sensor detects the pH level of the water and prompts the pH up / pH down pump to balance out the pH levels in the reservoir.
 <br>
 
 The grow box has a drainage system which allows continous flow of nutrient solution runs over the plants roots.
@@ -67,7 +70,13 @@ This type of system works very well because the roots of a plant absorb more oxy
 All this can be monitored on the website for this project.
 <br>
 
-This project intends to automate the process of Hydroponics using IOT to make the discharge of water and maintenance of the substrate a wireless one using a mobile application and/or a website.
+The below video shows a brief working of this project: (PS- Due to financial constraints, we have not used the EC sensor & pH up / down solutions)
+
+<div align="center">
+  
+[![Video Demonstration](http://img.youtube.com/vi/mIO8MYL-RWc/0.jpg)](http://www.youtube.com/watch?v=mIO8MYL-RWc "Video Demonstration")
+
+</div>
 
 ## Screenshots
 ![Home Page](https://imgur.com/UK5jDZZ.jpg)
@@ -84,34 +93,34 @@ This project intends to automate the process of Hydroponics using IOT to make th
 ![Sensor Data (Graphical)](https://i.imgur.com/Q6NAUEZ.jpg)
 
 ## Sensors Used<a name="sensors_used"></a>
-***Arduino Mega 2560***- The hardware will most likely fit perfectly in the UNO, the problem will be the program size that may not fit in the UNOs 32kB. Plus, such a project might be increased and a mega board will allow that more easily.
+**Arduino Mega 2560** - The hardware will most likely fit perfectly in the UNO, the problem will be the program size that may not fit in the UNOs 32kB. Plus, such a project might be increased and a mega board will allow that more easily.
 
-***Water-Level Sensor***- A water-level sensor is a device used in the detection of the water level.
+**Water-Level Sensor** - A water-level sensor is a device used in the detection of the water level.
 <br>
 
-***pH Sensor***- Optimal pH levels are critical to healthy plants and high yields in both soil and hydroponics gardening. Maintaining those optimal levels, especially in soil-less growing systems, calls for frequent, accurate pH testing. Ideal pH levels maximize a plant’s nutrient uptake. Those nutrients, in turn, increase a plant’s vigor and productivity.
+**pH Sensor** - Optimal pH levels are critical to healthy plants and high yields in both soil and hydroponics gardening. Maintaining those optimal levels, especially in soil-less growing systems, calls for frequent, accurate pH testing. Ideal pH levels maximize a plant’s nutrient uptake. Those nutrients, in turn, increase a plant’s vigor and productivity.
 <br>
 
-***EC Sensor***- To maximize the benefits of growing hydroponically, it’s important to know how to fine-tune your nutrient regimen to ensure your plants are getting everything they need, in the right doses. To do that, you need to learn how to measure EC, or electrical conductivity, which tells you the amounts of fertilizer salts in your water, and use those readings to feed your plants the right mix of elements for optimal growth and yields.
+**EC Sensor** - To maximize the benefits of growing hydroponically, it’s important to know how to fine-tune your nutrient regimen to ensure your plants are getting everything they need, in the right doses. To do that, you need to learn how to measure EC, or electrical conductivity, which tells you the amounts of fertilizer salts in your water, and use those readings to feed your plants the right mix of elements for optimal growth and yields.
 <br>
 
-***Water Temperature Sensor***- The pH value of the solution changes with the temperature i.e. an increase in any solutions’ temperature will cause a decrease in it’s viscosity and an increase in the mobility of it’s ions in solution. An increase in temperature may also lead to an increase in the number of ions in solution due to the dissociation of molecules. As pH is a measure of the hydrogen ion concentration, a change in the temperature of the solution will be reflected by a subsequent
+**Water Temperature Sensor** - The pH value of the solution changes with the temperature i.e. an increase in any solutions’ temperature will cause a decrease in it’s viscosity and an increase in the mobility of it’s ions in solution. An increase in temperature may also lead to an increase in the number of ions in solution due to the dissociation of molecules. As pH is a measure of the hydrogen ion concentration, a change in the temperature of the solution will be reflected by a subsequent
 change in pH. <sup>[[4]](#4)</sup>
 <br>
 
-***Soil Moisture Sensor***- This soil moisture sensor can be used to detect the moisture of soil or judge if there is water around the sensor, let's you know if the plants in the mesh pot require water or not.
+**Soil Moisture Sensor** - This soil moisture sensor can be used to detect the moisture of soil or judge if there is water around the sensor, let's you know if the plants in the mesh pot require water or not.
 <br>
 
-***DHT22 Temperature/Humidity Sensor***- The DHT22 is a humidity and temperature sensor with a single wire digital interface. The sensor is calibrated so you can get right to measuring relative humidity and temperature.
+**DHT22 Temperature/Humidity Sensor** - The DHT22 is a humidity and temperature sensor with a single wire digital interface. The sensor is calibrated so you can get right to measuring relative humidity and temperature.
 <br>
 
-***ESP8266***- ESP8266 is a WiFi module which helps us track all the sensor data on the website.
+**ESP8266** - ESP8266 is a WiFi module which helps us track all the sensor data on the website.
 <br>
 
-***DC Water Pump***- A DC Water Pump is used to pump water from the water reservoir to the substrate.
+**DC Water Pump** - A DC Water Pump is used to pump water from the water reservoir to the substrate.
 <br>
 
-***5V Relay***- A relay is an electromagnetic switch operated by a relatively small electric current that can turn on or off a much larger electric current. It is going to be used to control the DC Water Pump
+**5V Relay** - A relay is an electromagnetic switch operated by a relatively small electric current that can turn on or off a much larger electric current. It is going to be used to control the DC Water Pump
 <br>
 
 ## Software Requirements<a name="software_requirements"></a>
@@ -141,4 +150,4 @@ The aim of this project is to:
 [4]<a name="4"></a> https://manicbotanix.com/ph-meters/ <br>
 [5]<a name="5"></a> https://devpost.com/software/urban-hydroponic-oasis <br>
 
-### This project is developed by [Kyle Lobo](https://github.com/kylelobo), [Roshan James](https://github.com/sephiroth7712) and [Rutash Joshipura](https://github.com/rudij7)
+#### This project is developed by [Kyle Lobo](https://github.com/kylelobo), [Roshan James](https://github.com/sephiroth7712) and [Rutash Joshipura](https://github.com/rudij7).
