@@ -71,7 +71,7 @@
 
 - All this can be monitored on the website for this project.
 
-- The below video shows a brief working of this project: (💡 **PS-** Due to financial constraints, we have not used the EC sensor & pH up / down solutions)
+- The below video shows a brief working of this project: (💡 **PS -** Due to financial constraints, we have not used the EC sensor & pH up / down solutions) <br>
 
 <div align="center">
   
@@ -141,8 +141,11 @@ change in pH. <sup>[[4]](#4)</sup>
 ```
 $ git clone https://github.com/Hydroponics/Reddit-Bot.git
 ```
-5. Move the Hydroponics folder to ```/var/www/```.
-6. In your browser, open [localhost](http://localhost/).
+5. Move the Hydroponics folder to ```/var/www/```
+```
+$ sudo mv Hydroponics/ /var/www
+```
+6. In your browser, open [localhost](http://localhost/)
 
 
 ## 🔍 Conclusion <a name="conclusion"></a>
