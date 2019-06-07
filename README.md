@@ -71,7 +71,7 @@
 
 - All this can be monitored on the website for this project.
 
-- The below video shows a brief working of this project: (💡 **PS -** Due to financial constraints, we have not used the EC sensor & pH up / down solutions) <br>
+- The below video shows a brief working of this project: (💡 **PS -** Due to financial constraints, we have not used the EC sensor & pH up / down solutions)
 
 <div align="center">
   
