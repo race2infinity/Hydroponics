@@ -3,6 +3,7 @@
 #define samplingInterval 20
 #define printInterval 800
 #define ArrayLenth 40  
+
 int pHArray[ArrayLenth]; 
 int pHArrayIndex = 0;
 int countTrueCommand;
@@ -12,14 +13,15 @@ boolean found = false;
 float phVal() {
   static unsigned long samplingTime = millis();
   static unsigned long printTime = millis();
-  static float pHValue,voltage;
+  static float pHValue, voltage;
   if(millis()-samplingTime > samplingInterval) {
-      pHArray[pHArrayIndex++]=analogRead(SensorPin);
-      if(pHArrayIndex==ArrayLenth) 
-        pHArrayIndex=0;
-      voltage = avergearray(pHArray, ArrayLenth)*5.0/1024;
-      pHValue = 3.5*voltage+Offset;
-      samplingTime = millis();
+    pHArray[pHArrayIndex++] = analogRead(SensorPin);
+    if(pHArrayIndex == ArrayLenth) {
+      pHArrayIndex = 0;
+    }
+    voltage = avergearray(pHArray, ArrayLenth)*5.0/1024;
+    pHValue = 3.5*voltage+Offset;
+    samplingTime = millis();
   }
   if(millis()-printTime > printInterval) {
     Serial.print("Voltage:");
@@ -75,7 +77,6 @@ double avergearray(int* arr, int number) {
   }
   return avg;
 }
-
 
 void setup() {
   Serial.begin(9600);

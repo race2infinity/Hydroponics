@@ -8,15 +8,18 @@ int waterLevel() {
   int sensorReading = analogRead(A0);
   int range = map(sensorReading, sensorMin, sensorMax, 0, 3);
   switch (range) {
-    case 0:
+    case 0: {
       Serial.println("Water level full!");
       break;
-    case 1:  
+    }
+    case 1: {  
       Serial.println("Water level warning!");
       break;
-    case 2:    
+    }
+    case 2: {    
       Serial.println("Not enough water!");
       break;
+    }
   }
   return sensorReading;
 }

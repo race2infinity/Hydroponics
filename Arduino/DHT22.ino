@@ -15,12 +15,12 @@ void setup() {
 }
 
 void loop() {
-    delay(2000);
-    hum = dht.readHumidity();
-    temp= dht.readTemperature();
-    Serial.print("Humidity: ");
-    Serial.print(hum);
-    Serial.print(" %, Temp: ");
-    Serial.print(temp);
-    Serial.println(" Celsius");
+  delay(2000);
+  hum = dht.readHumidity();
+  temp= dht.readTemperature();
+  Serial.print("Humidity: ");
+  Serial.print(hum);
+  Serial.print(" %, Temp: ");
+  Serial.print(temp);
+  Serial.println(" Celsius");
 }

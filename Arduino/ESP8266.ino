@@ -30,7 +30,6 @@ int valSensor4 = 1;
 int valSensor5 = 1;
 SoftwareSerial esp8266(RX, TX);
 
-
 void setup() {
   Serial.begin(9600);
   dht.begin();
@@ -59,31 +58,25 @@ void sendCommand(String command, int maxTime, char readReplay[]) {
   Serial.print(". at command => ");
   Serial.print(command);
   Serial.print(" ");
-  while (countTimeCommand < (maxTime * 1))
-  {
+  while (countTimeCommand < (maxTime * 1)) {
     esp8266.println(command);//at+cipsend
-    if (esp8266.find(readReplay)) //ok
-    {
+    if (esp8266.find(readReplay)) //ok {
       found = true;
       break;
     }
-
     countTimeCommand++;
   }
 
-  if (found == true)
-  {
+  if (found == true) {
     Serial.println("OYI");
     countTrueCommand++;
     countTimeCommand = 0;
   }
 
-  if (found == false)
-  {
+  if (found == false) {
     Serial.println("Fail");
     countTrueCommand = 0;
     countTimeCommand = 0;
   }
-
   found = false;
 }

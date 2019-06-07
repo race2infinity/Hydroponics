@@ -1,6 +1,6 @@
 #include <SoftwareSerial.h>
-//#include <WiFi101.h>
-//#include <ThingSpeak.h>
+#include <WiFi101.h>
+#include <ThingSpeak.h>
 #include <DHT.h>
 
 #define DHTPIN 7
@@ -20,19 +20,19 @@ int pHArrayIndex = 0;
 int countTrueCommand;
 int countTimeCommand;
 boolean found = false;
-/*String AP = "";       // CHANGE ME
+String AP = "";       // CHANGE ME
 String PASS = ""; // CHANGE ME
 String API = "";   // CHANGE ME
 String HOST = "api.thingspeak.com";
 String PORT = "80";
 String field1 = "field1";
-String field2 = "field2";*/
+String field2 = "field2";
 int valSensor1 = 1;
 int valSensor2 = 1;
 int valSensor3 = 1;
 int valSensor4 = 1;
 int valSensor5 = 1;
-//SoftwareSerial esp8266(RX, TX);
+SoftwareSerial esp8266(RX, TX);
 
 int chk;
 float hum;  //Stores humidity value
@@ -44,8 +44,9 @@ float phVal() {
   static float pHValue, voltage;
   if (millis() - samplingTime > samplingInterval) {
     pHArray[pHArrayIndex++] = analogRead(SensorPin);
-    if (pHArrayIndex == ArrayLenth)
+    if (pHArrayIndex == ArrayLenth) {
       pHArrayIndex = 0;
+    }
     voltage = avergearray(pHArray, ArrayLenth) * 5.0 / 1024;
     pHValue = 3.5 * voltage + Offset;
     samplingTime = millis();
@@ -125,15 +126,18 @@ int waterLevel() {
   int sensorReading = analogRead(A0);
   int range = map(sensorReading, sensorMin, sensorMax, 0, 3);
   switch (range) {
-    case 0:
+    case 0: {
       Serial.println("Water level full!");
       break;
-    case 1:
+    }
+    case 1: {
       Serial.println("Water level warning!");
       break;
-    case 2:
+    }
+    case 2: {
       Serial.println("Not enough water!");
       break;
+    }
   }
   return sensorReading;
 }
@@ -142,35 +146,50 @@ void setup() {
   Serial.begin(9600);
   pinMode(13, OUTPUT);
   dht.begin();
-  /*ThingSpeak.begin(client);
+  ThingSpeak.begin(client);
   esp8266.begin(115200);
   sendCommand("AT", 5, "OK");
   sendCommand("AT+CWMODE=1", 5, "OK");
-  sendCommand("AT+CWJAP=\"" + AP + "\",\"" + PASS + "\"", 20, "OK");*/
+  sendCommand("AT+CWJAP=\"" + AP + "\",\"" + PASS + "\"", 20, "OK");
 }
 
 void loop() {
   delay(2000);
   hum = dht.readHumidity();
   temp = dht.readTemperature();
+
   Serial.print("Humidity: ");
   Serial.print(hum);
+  
   Serial.print(" %, Temp: ");
   Serial.print(temp);
+
   Serial.println(" Celsius");
+
   delay(2000);
+
   int valSensorPH = phVal();
+
   delay(2000);
+
   int valSensorSoil = soilMoistVal();
+
   delay(2000);
+
   int valSensorWaterTemp = waterTemp();
+
   delay(2000);
+
   int valSensorWaterLevel = waterLevel();
   Serial.println(valSensorWaterLevel);
+
   delay(2000);
+
   digitalWrite(13, LOW);
+
   delay(2000);
-  /*ThingSpeak.setField(1, temp);
+
+  ThingSpeak.setField(1, temp);
   ThingSpeak.setField(2, hum);
   ThingSpeak.writeFields(592525, "UWH8BKGIQVRARD0W");
   String getData = "GET /update?api_key=" + API + "&" + field1 + "=" + String(valSensor1) + "&" + field2 + "=" + String(valSensor2);
@@ -178,39 +197,34 @@ void loop() {
   sendCommand("AT+CIPSTART=0,\"TCP\",\"" + HOST + "\"," + PORT, 15, "OK");
   sendCommand("AT+CIPSEND=0," + String(getData.length() + 4), 6, ">");
   esp8266.println(getData); delay(2500); countTrueCommand++;
-  sendCommand("AT+CIPCLOSE=0", 5, "OK");*/
+  sendCommand("AT+CIPCLOSE=0", 5, "OK");
 }
 
-/*void sendCommand(String command, int maxTime, char readReplay[]) {
+void sendCommand(String command, int maxTime, char readReplay[]) {
   Serial.print(countTrueCommand);
   Serial.print(". at command => ");
   Serial.print(command);
   Serial.print(" ");
-  while (countTimeCommand < (maxTime * 1))
-  {
+  while (countTimeCommand < (maxTime * 1)) {
     esp8266.println(command);//at+cipsend
-    if (esp8266.find(readReplay)) //ok
-    {
+    if (esp8266.find(readReplay)) //ok {
       found = true;
       break;
     }
-
     countTimeCommand++;
   }
 
-  if (found == true)
-  {
+  if (found == true) {
     Serial.println("OYI");
     countTrueCommand++;
     countTimeCommand = 0;
   }
 
-  if (found == false)
-  {
+  if (found == false) {
     Serial.println("Fail");
     countTrueCommand = 0;
     countTimeCommand = 0;
   }
 
   found = false;
-}*/
+}
