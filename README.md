@@ -26,7 +26,7 @@
 - [Description](#description)
 - [Problem Definition](#problem_definition)
 - [Screenshots](#screenshots)
-- [Sensors Used](#sensors_used)
+- [Sensors Used](#hardware_used)
 - [Software Requirements](#software_requirements)
 - [Arduino Libraries Used](#arduino_libraries_used)
 - [Running the code](#running_the_code)
@@ -95,16 +95,16 @@
 ![Sensor Data (Graphical)](https://i.imgur.com/Q6NAUEZ.jpg)
 
 
-## 🔩 Sensors Used <a name="sensors_used"></a>
+## 🔩 Hardware Used <a name="hardware_used"></a>
 1. **Arduino Mega 2560** - The hardware will most likely fit perfectly in the UNO, the problem will be the program size that may not fit in the UNOs 32kB. Plus, such a project might be increased and a mega board will allow that more easily.
 
 2. **Water-Level Sensor** - A water-level sensor is a device used in the detection of the water level.
 
-3. **pH Sensor** - Optimal pH levels are critical to healthy plants and high yields in both soil and hydroponics gardening. Maintaining those optimal levels, especially in soil-less growing systems, calls for frequent, accurate pH testing. Ideal pH levels maximize a plant’s nutrient uptake. Those nutrients, in turn, increase a plant’s vigor and productivity.
+3. **pH Sensor** - Optimal pH levels are critical to healthy plants and high yields in both soil and hydroponics gardening. Maintaining those optimal levels, especially in soilless growing systems, calls for frequent, accurate pH testing. Ideal pH levels maximize a plant’s nutrient uptake. Those nutrients, in turn, increase a plant’s vigor and productivity.
 
 4. **EC Sensor** - To maximize the benefits of growing hydroponically, it’s important to know how to fine-tune your nutrient regimen to ensure your plants are getting everything they need, in the right doses. To do that, you need to learn how to measure EC, or electrical conductivity, which tells you the amounts of fertilizer salts in your water, and use those readings to feed your plants the right mix of elements for optimal growth and yields.
 
-5. **Water Temperature Sensor** - The pH value of the solution changes with the temperature i.e. an increase in any solutions’ temperature will cause a decrease in it’s viscosity and an increase in the mobility of it’s ions in solution. An increase in temperature may also lead to an increase in the number of ions in solution due to the dissociation of molecules. As pH is a measure of the hydrogen ion concentration, a change in the temperature of the solution will be reflected by a subsequent
+5. **Water Temperature Sensor** - The pH value of the solution changes with the temperature i.e. an increase in any solutions’ temperature will cause a decrease in it’s viscosity and an increase in the mobility of its ions in solution. An increase in temperature may also lead to an increase in the number of ions in solution due to the dissociation of molecules. As pH is a measure of the hydrogen ion concentration, a change in the temperature of the solution will be reflected by a subsequent
 change in pH. <sup>[[4]](#4)</sup>
 
 6. **Soil Moisture Sensor** - This soil moisture sensor can be used to detect the moisture of soil or judge if there is water around the sensor, let's you know if the plants in the mesh pot require water or not.
